@@ -1,0 +1,14 @@
+{
+  "name": "crypted-jwt",
+  "version": "1.0.1",
+  "description": "You can ensure that your JWT keys are not easily cracked by hashing them with Crypto.",
+  "main": "index.js",
+  "repository": "https://github.com/ugurcanalyuz/crypted-jwt.git",
+  "author": "Uğurcan Alyüz",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "jsonwebtoken": "^9.0.1"
+  }
+}
