@@ -7,7 +7,7 @@ class CryptedJwt {
         this.salt2 = options.salt2
         this.salt3 = options.salt3
         this.jsonSecretKey = options.jsonSecretKey
-        this.expiredIn = options.expiredIn
+        this.expiresIn = options.expiresIn
         this.cryptoSecretKey = options.cryptoSecretKey
     }
 
@@ -15,7 +15,7 @@ class CryptedJwt {
         if (typeof(payload) !== 'object') {
             return "A payload must be an Object."
         } else {
-            const jsonToken = sign(payload, this.jsonSecretKey, { expiredIn: this.expiredIn })
+            const jsonToken = sign(payload, this.jsonSecretKey, { expiresIn: this.expiresIn })
             const cryptoJsonWebToken = cryptoEncrypt(jsonToken, this.cryptoSecretKey)
 
             const randomText1 = randomHex(this.salt1)
